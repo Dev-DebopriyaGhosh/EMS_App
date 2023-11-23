@@ -31,4 +31,15 @@ public class UserDAO extends HibernateDaoSupport {
 			
 			return entries.get(0);
 		}
+		
+		@Transactional(value="hibernate.em.transactionManager.user")
+		public boolean saveUser(User user) {
+			try {
+				getHibernateTemplate().saveOrUpdate(user);
+			} catch (Exception e) {
+				System.out.println("Exception in saveUser : "+e.getMessage());
+				return false;
+			}
+			return true; 	
+		}
 }

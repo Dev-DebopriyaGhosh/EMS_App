@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.management.employeeManagement.model">
 	<class name="User" table="USER_ROLES">
 		<id name="userId" column="USER_ID" type="int">
-			<generator class="native"/>
+			<generator class="identity"/>
 		</id>
 		<property name="userName" column="USER_NAME" type="string"/>
 		<property name="password" column="USER_PASSWORD" type="string"/>

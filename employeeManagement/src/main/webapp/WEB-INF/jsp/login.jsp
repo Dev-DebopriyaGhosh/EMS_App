@@ -16,6 +16,8 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery-3.7.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/app.js"></script>
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
@@ -57,7 +59,7 @@
 				</form>
 			</div>
 			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
+				<div class="d-flex justify-content-center links" id="signUp">
 					Don't have an account?<a href="#">Sign Up</a>
 				</div>
 				<div class="d-flex justify-content-center">
@@ -67,5 +69,6 @@
 		</div>
 	</div>
 </div>
+<div id="registrationDiv"></div>
 </body>
 </html>

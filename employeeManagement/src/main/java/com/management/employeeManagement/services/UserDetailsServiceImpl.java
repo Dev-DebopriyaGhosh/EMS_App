@@ -34,5 +34,10 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 		EMSUserDetails userDetails = new EMSUserDetails(user);
 		return userDetails;
 	}
+	
+	public boolean saveUser(User user) throws Exception {
+		boolean result = userDao.saveUser(user);
+		return result;
+	}
 
 }
