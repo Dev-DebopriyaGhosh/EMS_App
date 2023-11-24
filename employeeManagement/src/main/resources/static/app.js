@@ -1,6 +1,8 @@
 /**
  * 
  */
+// Initialization for ES Users
+
 
 $(document).ready(function() {
     // jQuery code
@@ -10,7 +12,15 @@ $(document).ready(function() {
 			$('body').css('background-image', 'none');
 			$("#registrationDiv").html(data);
 		});
-	});  
+	}); 
+	
+	/*$("#loadDash").click(function(){
+		$.post("/user/loadDashboard","test", function(data, status){
+			if(status =="success"){
+				
+			}
+		});
+	});*/
 	
 });
 
@@ -22,6 +32,19 @@ function registerUser(){
 			$("#regis_success").show();
 			$("#regis_success").append(data);
 			
+			
+		}
+	});
+}
+
+function showAccountCard(){
+	$(".acc_optn").show();
+	
+}
+
+function loadDashboard(){
+	$.get("/user/loadDashboard", function(data, status){
+		if(status =="success"){
 			
 		}
 	});

@@ -16,9 +16,16 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="jquery-3.7.1.min.js"></script>
 	<script src="${pageContext.request.contextPath}/app.js"></script>
-
+<script type="text/javascript">
+function redirectToDasboard(){
+	$.get("/user/welcome", function(data, status){
+		if(status =="success"){
+			
+		}
+	});
+}
+</script>
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -54,7 +61,7 @@
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" class="btn float-right login_btn">
+						<input type="submit" name="submit" class="btn float-right login_btn" onclick="redirectToDasboard()">
 					</div>
 				</form>
 			</div>
