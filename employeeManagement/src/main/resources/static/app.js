@@ -14,14 +14,6 @@ $(document).ready(function() {
 		});
 	}); 
 	
-	/*$("#loadDash").click(function(){
-		$.post("/user/loadDashboard","test", function(data, status){
-			if(status =="success"){
-				
-			}
-		});
-	});*/
-	
 });
 
 function registerUser(){
@@ -37,15 +29,3 @@ function registerUser(){
 	});
 }
 
-function showAccountCard(){
-	$(".acc_optn").show();
-	
-}
-
-function loadDashboard(){
-	$.get("/user/loadDashboard", function(data, status){
-		if(status =="success"){
-			
-		}
-	});
-}

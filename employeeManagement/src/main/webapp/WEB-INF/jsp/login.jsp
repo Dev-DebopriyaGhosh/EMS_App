@@ -1,6 +1,6 @@
 
 <!------ Include the above in your HEAD tag ---------->
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html >
 <head>
@@ -17,15 +17,7 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="${pageContext.request.contextPath}/app.js"></script>
-<script type="text/javascript">
-function redirectToDasboard(){
-	$.get("/user/welcome", function(data, status){
-		if(status =="success"){
-			
-		}
-	});
-}
-</script>
+
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -61,11 +53,14 @@ function redirectToDasboard(){
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" class="btn float-right login_btn" onclick="redirectToDasboard()">
+						<input type="submit" id="loadDash" name="submit" class="btn float-right login_btn" onclick="redirectToDasboard()">
 					</div>
 				</form>
 			</div>
 			<div class="card-footer">
+				<c:if test="${param.error == 'true'}">
+            		<div style="color: red;">Invalid username or password</div>
+        		</c:if>
 				<div class="d-flex justify-content-center links" id="signUp">
 					Don't have an account?<a href="#">Sign Up</a>
 				</div>
