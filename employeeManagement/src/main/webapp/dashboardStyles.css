@@ -1,0 +1,74 @@
+
+/* Vertical line style */
+.vertical-line {
+    border-left: 1px solid #ccc; /* Adjust the color as needed */
+    height: 100vh; /* Adjust the height based on your layout */
+    position: absolute;
+    left: 50%;
+    margin-left: -1px; /* Half of the border width to center it */
+}
+
+.horizontal-line {
+	border-top: 1px solid #ccc; /* Adjust the color as needed */
+	width: 100%;
+}
+
+.paddingLeft{
+	padding-left: 20px;
+}
+
+.table-container {
+	max-height: 300px; /* Set the desired height for the container */
+	overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.header-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.content-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: -1px;
+	/* Compensate for the border to avoid a gap between tables */
+}
+.sticky-header th {
+            position: sticky;
+            top: 0;
+            height: 50px;
+}
+.custom-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        /* Style for the arrow icon */
+        .arrow-icon {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #333;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            margin-left: -6px;
+            color:white;
+        }
+
+        /* Style for the custom arrow option */
+        .custom-option {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for the custom arrow option hover state */
+        .custom-option:hover {
+            background-color: #f2f2f2;
+        }

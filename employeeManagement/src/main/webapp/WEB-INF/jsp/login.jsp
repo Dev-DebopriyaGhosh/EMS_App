@@ -53,7 +53,7 @@
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" id="loadDash" name="submit" class="btn float-right login_btn" onclick="redirectToDasboard()">
+						<input type="submit" name="submit" class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>

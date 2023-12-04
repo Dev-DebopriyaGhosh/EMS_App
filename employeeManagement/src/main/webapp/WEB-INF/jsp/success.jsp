@@ -13,6 +13,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="${pageContext.request.contextPath}/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="/dashboardStyles.css">
 	<script>function loadDashboard(){
 		$.get("/user/loadDashboard", function(data, status){
 			if(status =="success"){
@@ -25,7 +26,7 @@
 <body>
 	<!-- Navbar -->
 	<nav data-mdb-navbar-init 
-		class="navbar navbar-expand-lg">
+		class="navbar navbar-expand-lg ">
 		<!-- Container wrapper -->
 		<div class="container-fluid">
 			<!-- Toggle button -->
@@ -58,9 +59,9 @@
 			<!-- Right elements -->
 			<div class="d-flex align-items-center">
 				<!-- Icon -->
-				<a class="link-secondary me-3" href="#"> <i
+				<!-- <a class="link-secondary me-3" href="#"> <i
 					class="fas fa-shopping-cart"></i>
-				</a>
+				</a> -->
 
 				<!-- Notifications -->
 				<!-- <div class="dropdown">
@@ -101,6 +102,7 @@
 		</div>
 		<!-- Container wrapper -->
 	</nav>
+	<div class="horizontal-line"></div>
 	<div id="searchContainer"></div>
 </body>
 </html>
